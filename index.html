@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/Calculator-icon.png" type="image/png">
+    <title>Katik Kalkulator Matematika</title>
+</head>
+<body>
+    <header>
+        <button type="button" id="header">
+            <span class="title">Katik </span>
+            <span>Kalkulator Matematika</span> 
+        </button>
+    </header>
+
+    <main>     
+        <fieldset>
+            <h1>Welcome to Katik</h1>
+            <p>Hai Sobat, Selamat datang di Katik &#58;&#93;</p>
+            <p>Sebuah web apps sederhana yang berfungsi untuk menilai luas dan keliling bangun datar</p>
+            <div class="choice">
+                <span>
+                    <button type="button" class="persegi" id="persegi">Persegi</button>
+                </span>
+                <span>
+                    <button type="button" class="persegi-panjang" id="persegi-panjang" align="center">P&#46;&nbsp;Panjang</button>
+                </span>
+            </div>
+            <div class="msg" id="msg">
+                <h1>Maaf menu ini masih dalam tahap pengembangan, Terima Kasih&#33;</h1>
+            </div>
+            <div id="square">
+                <!-- Luas Persegi -->
+                <div class="area-box">
+                    <div class="area-text">
+                        <span>Luas Persegi</span>
+                    </div>
+                    <div class="square"></div>
+                    <p>Rumus luas persegi yaitu </p>
+                    <h4>L = S x S</h4>
+                    <p>Di mana:</p>
+                    <p>L = Luas</p>
+                    <p>S = Sisi</p>
+                    <hr>
+                    <h1>Hitung Luas Persegi</h1>
+                    <form>
+                        <input type="text" class="sisi" placeholder="Nilai Sisi" id="sisi-luas">
+                        <p id="output_luas"></p>
+                        <button type="button" class="hitung-luas" id="hitung-luas">Hitung</button>
+                        <button type="reset" class="reset-luas" id="reset-luas">Reset</button>
+                    </form>
+                </div>
+                <!-- Keliling Persegi -->
+                <div class="area-box">
+                    <div class="area-text">
+                        <span>Keliling Persegi</span>
+                    </div>
+                    <div class="square"></div>
+                    <p>Rumus Keliling persegi yaitu </p>
+                    <h4>K = 4 x S</h4>
+                    <p>Di mana:</p>
+                    <p>K = Keliling</p>
+                    <p>S = Sisi</p>
+                    <hr>
+                    <h1>Hitung Keliling Persegi</h1>
+                    <form>
+                        <input type="text" class="sisi" placeholder="Nilai Sisi" id="sisi-keliling">
+                        <p id="output_keliling"></p>
+                        <button type="button" class="hitung-keliling" id="hitung-keliling">Hitung</button>
+                        <button type="reset" class="reset-keliling" id="reset-keliling">Reset</button>
+                    </form>
+                </div>
+            </div>
+        </fieldset>
+    </main>
+
+    <footer>
+        <span>
+            <a href="https://github.com/hsnrzky" target="_blank"><img src="assets/github-icon.png" alt=""></a>
+        </span>
+        <span>
+            <a href="https://instagram.com/hsnrzky" target="_blank"><img src="assets/instagram-icon.png" alt=""></a>
+        </span>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

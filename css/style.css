@@ -1,0 +1,158 @@
+body {
+    background-color: rgba(216, 216, 216, 0.793);
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    background-color: rgb(39, 187, 245);
+    text-align: center;
+    padding: 30px;
+    margin: -10px;
+}
+header button {
+    background-color: transparent;
+    border: 0px solid transparent;
+    cursor: pointer;
+}
+header span {
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(221, 221, 221);
+}
+.title{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+fieldset {
+    background: #fefefe;
+    margin: 35px 10px;
+    padding: 10px;
+    max-height: 100%;
+    text-align: center;
+    border: 0 solid transparent;
+}
+.msg h1 {
+    color: red;
+}
+.choice {
+    margin: auto;
+    width: auto;
+}
+.choice span button {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    border: 0px solid black;
+    cursor: pointer;
+    background-color: #fefefe;
+    color:rgb(39, 187, 245);
+    font-size: medium;
+}
+.persegi {
+    padding: 10px 47%;
+    margin: 40px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
+}
+.persegi-panjang {
+    padding: 10px 46.2%;
+    margin: 0px 20px 50px;
+    border-radius: 0px 0px 5px 5px;
+
+}
+.area-box {
+    height: fit-content;
+    width: 98%;
+    border: 2px solid;
+    border-color: rgb(39, 187, 245);
+    margin: 30px auto;
+    
+}
+.area-text{
+    background: rgb(39, 187, 245);
+    padding: 30px;
+    color: #fefefe;
+    margin: auto;
+}
+
+.area-text span {
+    font-size: 25px;
+    font-weight: bold;
+}
+.square {
+    height: 100px;
+    width: 100px;
+    margin: 40px auto;
+    display: flex;
+    border: 3px solid rgb(254, 31, 31);
+}
+.area-box p {
+    text-align: left;
+    margin: 3px 30px;
+}
+hr {
+    margin: 30px 0;
+}
+.sisi{
+    width: 95%;
+    height: 30px;
+    border: 1px solid #b3b2b2;
+    border-radius: 5px;
+    margin: 20px auto;
+    font-size: medium;
+}
+.hitung-luas {
+    background-color: rgb(39, 187, 245);
+    padding: 10px 15px;
+    color: white;
+    border: 0px solid rgb(52, 51, 51);
+    border-radius: 5px;
+    font-size: large;
+    cursor: pointer;
+}
+.hitung-keliling {
+    background-color: rgb(39, 187, 245);
+    padding: 10px 15px;
+    color: white;
+    border: 0px solid rgb(52, 51, 51);
+    border-radius: 5px;
+    font-size: large;
+    cursor: pointer;
+}
+.reset-luas {
+    display: flex;
+    background-color: rgb(252, 189, 0);
+    padding: 5px 10px;
+    color: white;
+    border: 0px solid rgb(52, 51, 51);
+    border-radius: 5px;
+    font-size: large;
+    cursor: pointer;
+    margin: 20px auto;
+}
+.reset-keliling {
+    display: flex;
+    background-color: rgb(252, 189, 0);
+    padding: 5px 10px;
+    color: white;
+    border: 0px solid rgb(52, 51, 51);
+    border-radius: 5px;
+    font-size: large;
+    cursor: pointer;
+    margin: 20px auto;
+}
+footer {
+    text-align: center;
+    align-content: space-between;
+    text-decoration: none;
+    text-transform: none;
+}
+footer span a{
+    align-content: space-between;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+img {
+    width: 32px;
+    height: 32px;
+}
