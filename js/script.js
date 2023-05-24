@@ -1,33 +1,33 @@
-var header = document.getElementById("header");
-var outputLuas = document.getElementById("output_luas");
-var outputKeliling = document.getElementById("output_keliling");
-var persegi = document.getElementById("persegi");
-var persegiPanjang = document.getElementById("persegi-panjang");
-var main = document.getElementById("square");
-var msg = document.getElementById("msg");
+const header = document.getElementById("header");
+const outputLuas = document.getElementById("output_luas");
+const outputKeliling = document.getElementById("output_keliling");
+const persegi = document.getElementById("persegi");
+const persegiPanjang = document.getElementById("persegi-panjang");
+const main = document.getElementById("square");
+const msg = document.getElementById("msg");
 msg.style.display = "none"
 main.style.display = "none"
 
 // untuk merumuskan Luas dan memanggil output
 function luas() {
-    var sisi_luas = document.getElementById("sisi-luas").value;
-    var luas = sisi_luas * sisi_luas;
+    const sisi_luas = document.getElementById("sisi-luas").value;
+    const luas = sisi_luas * sisi_luas;
     outputLuas.style.display = "block";
     outputLuas.innerHTML = "L = S x S<br>L = " + sisi_luas + " x " + sisi_luas + "<br>L = " + luas;
 }
 
 // untuk merumusan Keliling dan memanggil output
 function keliling() {
-    var sisi_keliling = document.getElementById("sisi-keliling").value;
-    var keliling = 4 * sisi_keliling;
+    const sisi_keliling = document.getElementById("sisi-keliling").value;
+    const keliling = 4 * sisi_keliling;
     outputKeliling.style.display = "block";
     outputKeliling.innerHTML = "K = 4 x S<br>K = 4 x " + sisi_keliling + "<br>K = " + keliling;
 }
 
 // untuk mereset dan menghapsu output
 function reset() {
-    var resetLuas = document.getElementById("reset-luas");
-    var resetKeliling = document.getElementById("reset-keliling");
+    const resetLuas = document.getElementById("reset-luas");
+    const resetKeliling = document.getElementById("reset-keliling");
     if (resetLuas) {
         outputLuas.style.display = "none";
     }
