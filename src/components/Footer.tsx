@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
         <div className="space-y-1">
           <p>&copy; {new Date().getFullYear()} Hasan Rizki. All rights reserved.</p>
-          <p className="text-xs">Built with Go, Microservices, and Scalability in mind.</p>
+          <p className="text-xs">Built with PHP Laravel, Python, and a focus on operational efficiency.</p>
         </div>
       </div>
     </footer>

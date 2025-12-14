@@ -48,27 +48,27 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, description, technologies,
 const ProjectsSection = () => {
   const projects: ProjectProps[] = [
     {
-      title: "Distributed Microservices Platform",
-      description: "Designed and implemented a highly scalable microservices platform using Go, Kafka for event streaming, and Kubernetes for orchestration. Achieved high availability and fault tolerance.",
-      technologies: ["Go", "Microservices", "Kafka", "Kubernetes", "Docker", "PostgreSQL"],
+      title: "Laravel E-commerce Prototype",
+      description: "Developed a basic e-commerce platform prototype using PHP Laravel, focusing on user authentication, product catalog management, and shopping cart functionality.",
+      technologies: ["PHP", "Laravel", "MySQL", "Blade Templates", "Bootstrap"],
       githubLink: "#", // Placeholder
     },
     {
-      title: "Real-time Analytics Engine",
-      description: "Developed a real-time data processing engine in Go, capable of ingesting and analyzing high volumes of streaming data. Optimized for low latency and high throughput.",
-      technologies: ["Go", "Apache Flink", "Redis", "Prometheus", "Grafana"],
+      title: "Python Data Processing Script",
+      description: "Created a Python script utilizing Pandas for cleaning, transforming, and analyzing structured data sets, generating summary reports for basic insights.",
+      technologies: ["Python", "Pandas", "Data Cleaning", "Reporting"],
       githubLink: "#", // Placeholder
     },
     {
-      title: "API Gateway with Rate Limiting",
-      description: "Built a custom API Gateway in Go to manage and secure microservice endpoints, including features like authentication, authorization, and advanced rate limiting algorithms.",
-      technologies: ["Go", "gRPC", "JWT", "Redis", "Nginx"],
+      title: "RESTful API Service (Laravel)",
+      description: "Built a simple RESTful API using Laravel for managing resources (CRUD operations), demonstrating understanding of API design principles and routing.",
+      technologies: ["PHP", "Laravel", "API Development", "JSON", "Postman"],
       githubLink: "#", // Placeholder
     },
     {
-      title: "Scalable E-commerce Backend",
-      description: "Contributed to the backend development of an e-commerce platform, focusing on order processing, inventory management, and payment integration using Go and a message queue system.",
-      technologies: ["Go", "RabbitMQ", "MongoDB", "Stripe API", "Elasticsearch"],
+      title: "Administrative Dashboard Interface",
+      description: "Designed and implemented a simple web dashboard for administrative tasks, focusing on efficient data display and user interaction for internal operations.",
+      technologies: ["HTML", "CSS", "JavaScript", "Bootstrap/Tailwind"],
       githubLink: "#", // Placeholder
     },
   ];
@@ -77,7 +77,7 @@ const ProjectsSection = () => {
     <section id="projects" className="container py-16 md:py-24 space-y-12">
       <h2 className="text-4xl font-bold text-center text-foreground opacity-0 animate-fade-in-up">My Projects</h2>
       <p className="text-lg text-center text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-up [animation-delay:100ms]">
-        Showcasing my expertise in building robust and scalable backend systems with Go, microservices, and distributed architectures.
+        Showcasing my foundational skills in web development using PHP Laravel and data handling with Python.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
         {projects.map((project, index) => (

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Code, Cloud, Server, GitBranch, Database, MessageSquareText } from "lucide-react";
+import { Code, Briefcase, Laptop, Users, Database } from "lucide-react";
 
 interface SkillCategoryProps {
   title: string;
@@ -31,34 +31,29 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ title, icon: Icon, skills
 const SkillsSection = () => {
   const skillCategories = [
     {
-      title: "Programming Languages",
+      title: "Programming & Web Development",
       icon: Code,
-      skills: ["Go (Golang)", "Python", "TypeScript", "JavaScript", "SQL"],
+      skills: ["PHP", "Laravel Framework", "HTML", "CSS", "JavaScript", "RESTful APIs"],
     },
     {
-      title: "Backend & Microservices",
-      icon: Server,
-      skills: ["Microservices Architecture", "RESTful APIs", "gRPC", "Distributed Systems", "System Design", "Scalability", "Performance Optimization"],
-    },
-    {
-      title: "Cloud & DevOps",
-      icon: Cloud,
-      skills: ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform", "Git", "Prometheus", "Grafana"],
-    },
-    {
-      title: "Databases & Caching",
+      title: "Data & Analysis",
       icon: Database,
-      skills: ["PostgreSQL", "MongoDB", "Redis", "Cassandra", "Elasticsearch", "Kafka"],
+      skills: ["Python", "Basic Data Analysis", "SQL"],
     },
     {
-      title: "Message Queues",
-      icon: MessageSquareText,
-      skills: ["Kafka", "RabbitMQ", "NATS"],
+      title: "Office & Administration",
+      icon: Briefcase,
+      skills: ["MS Office (Word, Excel)", "Data Entry", "Document Management", "Customer Data Management"],
     },
     {
-      title: "Testing & Quality",
-      icon: GitBranch,
-      skills: ["Unit Testing", "Integration Testing", "End-to-End Testing", "TDD"],
+      title: "Technical Operations",
+      icon: Laptop,
+      skills: ["Laptop & Handphone Repair (Basic)", "Technical Troubleshooting", "Inventory Management"],
+    },
+    {
+      title: "Soft Skills",
+      icon: Users,
+      skills: ["Fast Learner", "Teamwork", "Adaptability", "Communication (Indonesian Active)"],
     },
   ];
 
@@ -66,7 +61,7 @@ const SkillsSection = () => {
     <section id="skills" className="container py-16 md:py-24 space-y-12">
       <h2 className="text-4xl font-bold text-center text-foreground opacity-0 animate-fade-in-up">My Expertise</h2>
       <p className="text-lg text-center text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-up [animation-delay:100ms]">
-        A comprehensive overview of my technical skills and the tools I leverage to build robust backend solutions.
+        A comprehensive overview of my technical and administrative skills, focusing on PHP/Laravel, Python, and operational efficiency.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
         {skillCategories.map((category, index) => (

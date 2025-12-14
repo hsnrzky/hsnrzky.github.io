@@ -12,14 +12,13 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-3xl space-y-6">
         <h1 className="text-5xl md:text-7xl font-extrabold leading-tight text-foreground opacity-0 animate-fade-in-up">
-          Hasan Rizki
+          Hasan Rizki Sulaiman
         </h1>
         <p className="text-2xl md:text-4xl font-semibold text-primary opacity-0 animate-fade-in-up [animation-delay:100ms]">
-          Backend Golang Developer
+          Aspiring Developer & Information System Student
         </p>
         <p className="text-lg md:text-xl text-muted-foreground opacity-0 animate-fade-in-up [animation-delay:200ms]">
-          Crafting robust, scalable, and high-performance backend systems with Go,
-          specializing in Microservices architecture and system scalability.
+          A passionate student with a foundation in technical administration, basic backend development (PHP Laravel), and data analysis (Python). Eager to apply technical and non-technical skills in a professional IT environment.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 pt-8 opacity-0 animate-fade-in-up [animation-delay:300ms]">
           <Button size="lg" className="group relative overflow-hidden shadow-lg shadow-primary/30">
