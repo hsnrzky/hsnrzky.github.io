@@ -52,7 +52,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="container py-16 md:py-24 space-y-12">
-      <div className="text-center space-y-4">
+      <div className="text-center space-y-4 opacity-0 animate-fade-in-up">
         <Mail className="h-10 w-10 text-primary mx-auto" />
         <h2 className="text-4xl font-bold text-foreground">Get In Touch</h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -60,7 +60,7 @@ const ContactSection = () => {
         </p>
       </div>
 
-      <div className="max-w-lg mx-auto">
+      <div className="max-w-lg mx-auto opacity-0 animate-fade-in-up [animation-delay:200ms]">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField

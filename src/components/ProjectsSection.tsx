@@ -15,7 +15,7 @@ interface ProjectProps {
 
 const ProjectCard: React.FC<ProjectProps> = ({ title, description, technologies, githubLink, liveLink }) => {
   return (
-    <Card className="bg-card border-border hover:shadow-lg transition-shadow duration-300 group">
+    <Card className="bg-card border-border hover:shadow-xl transition-all duration-500 group hover:scale-[1.02]">
       <CardHeader>
         <CardTitle className="text-primary group-hover:text-primary/80 transition-colors duration-300">{title}</CardTitle>
         <CardDescription className="text-muted-foreground">{description}</CardDescription>
@@ -31,12 +31,12 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, description, technologies,
         <div className="flex gap-3">
           {githubLink && (
             <a href={githubLink} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center">
-              <Github className="h-5 w-5 mr-1" /> GitHub
+              <Github className="h-5 w-5 mr-1 group-hover:scale-110 transition-transform" /> GitHub
             </a>
           )}
           {liveLink && (
             <a href={liveLink} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center">
-              <LinkIcon className="h-5 w-5 mr-1" /> Live Demo
+              <LinkIcon className="h-5 w-5 mr-1 group-hover:scale-110 transition-transform" /> Live Demo
             </a>
           )}
         </div>
@@ -75,13 +75,16 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="container py-16 md:py-24 space-y-12">
-      <h2 className="text-4xl font-bold text-center text-foreground animate-fade-in-up">My Projects</h2>
-      <p className="text-lg text-center text-muted-foreground max-w-2xl mx-auto animate-fade-in-up delay-100">
+      <h2 className="text-4xl font-bold text-center text-foreground opacity-0 animate-fade-in-up">My Projects</h2>
+      <p className="text-lg text-center text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-up [animation-delay:100ms]">
         Showcasing my expertise in building robust and scalable backend systems with Go, microservices, and distributed architectures.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
         {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+          // Apply staggered animation to cards
+          <div key={index} className={`opacity-0 animate-fade-in-up`} style={{ animationDelay: `${200 + index * 100}ms` }}>
+            <ProjectCard {...project} />
+          </div>
         ))}
       </div>
     </section>
