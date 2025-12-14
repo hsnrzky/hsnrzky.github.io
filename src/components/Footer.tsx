@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -25,6 +25,15 @@ const Footer = () => {
             aria-label="LinkedIn"
           >
             <Linkedin className="h-6 w-6" />
+          </a>
+          <a 
+            href="https://instagram.com/hsnrzky"
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-muted-foreground hover:text-primary transition-colors"
+            aria-label="Instagram"
+          >
+            <Instagram className="h-6 w-6" />
           </a>
         </div>
         <div className="space-y-1">
