@@ -35,58 +35,59 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom HSL values for Hasan Rizki's website */
+    --charcoal: 210 19% 24%; /* #2C3E50 */
+    --deep-navy: 210 35% 17%; /* #1A2C3E */
+    --electric-blue: 195 100% 50%; /* #00BFFF */
+    --teal-accent: 180 100% 41%; /* #00CED1 */
+    --light-grey: 210 20% 90%; /* #E6E9ED */
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: var(--deep-navy);
+    --foreground: var(--light-grey);
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: var(--charcoal);
+    --card-foreground: var(--light-grey);
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: var(--charcoal);
+    --popover-foreground: var(--light-grey);
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: var(--electric-blue);
+    --primary-foreground: 0 0% 100%; /* White */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: var(--charcoal);
+    --secondary-foreground: var(--light-grey);
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: var(--charcoal);
+    --muted-foreground: var(--light-grey);
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: var(--electric-blue);
+    --accent-foreground: 0 0% 100%; /* White */
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --border: var(--charcoal);
+    --input: var(--charcoal);
+    --ring: var(--electric-blue);
+
+    --sidebar-background: var(--deep-navy);
+    --sidebar-foreground: var(--light-grey);
+    --sidebar-primary: var(--electric-blue);
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: var(--charcoal);
+    --sidebar-accent-foreground: var(--light-grey);
+    --sidebar-border: var(--charcoal);
+    --sidebar-ring: var(--electric-blue);
   }
 }
 
