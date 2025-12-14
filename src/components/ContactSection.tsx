@@ -50,6 +50,8 @@ const ContactSection = () => {
     form.reset();
   }
 
+  const contactEmail = "hasan.rizki.dev@example.com";
+
   return (
     <section id="contact" className="container py-16 md:py-24 space-y-12">
       <div className="text-center space-y-4 opacity-0 animate-fade-in-up">
@@ -58,6 +60,16 @@ const ContactSection = () => {
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           I am currently open to new opportunities and collaborations. Feel free to reach out!
         </p>
+        
+        <div className="flex justify-center items-center space-x-2 text-lg font-medium text-foreground pt-2">
+          <Mail className="h-5 w-5 text-primary" />
+          <a 
+            href={`mailto:${contactEmail}`} 
+            className="hover:text-primary transition-colors underline underline-offset-4"
+          >
+            {contactEmail}
+          </a>
+        </div>
       </div>
 
       <div className="max-w-lg mx-auto opacity-0 animate-fade-in-up [animation-delay:200ms]">
