@@ -3,6 +3,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "./ThemeToggle";
 
 const Navbar = () => {
   return (
@@ -16,6 +17,7 @@ const Navbar = () => {
           <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#skills">Skills</NavLink>
           <NavLink href="#contact">Contact</NavLink>
+          <ThemeToggle />
         </div>
       </div>
     </nav>
