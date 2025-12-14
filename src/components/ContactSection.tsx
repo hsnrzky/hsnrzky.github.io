@@ -52,7 +52,7 @@ const ContactSection = () => {
     toast.info("Submitting message...");
   }
 
-  const contactEmail = "hasan.rizki.dev@example.com";
+  const contactEmail = "hasanrizzky20@gmail.com";
   
   // IMPORTANT: Replace this placeholder with your actual Formspree endpoint URL.
   // Example: "https://formspree.io/f/yourformhash"
