@@ -20,7 +20,7 @@ const Navbar = () => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}>
-            <span className="font-bold text-lg text-primary hover:text-primary/80 transition-colors duration-200">Hasan Rizki</span>
+            <span className="font-bold text-lg text-primary hover:text-primary/80 transition-colors duration-200">Hasan Rizki Sulaiman</span>
           </a>
         </div>
         
@@ -55,7 +55,7 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
       onClick={handleClick}
       className={cn(
         "text-sm font-medium transition-colors hover:text-primary",
-        "text-muted-foreground"
+        "text-muted-foreground hover:text-foreground" // Enhanced hover effect
       )}
     >
       {children}
