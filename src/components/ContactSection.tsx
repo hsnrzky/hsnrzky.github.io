@@ -43,14 +43,20 @@ const ContactSection = () => {
     },
   });
 
-  function onSubmit(data: ContactFormValues) {
-    // Placeholder for API submission
-    console.log("Form submitted:", data);
-    toast.success("Thank you for your message! I will get back to you soon.");
-    form.reset();
+  // NOTE: We are using Formspree (or similar service) for submission.
+  // The form submission is handled by the HTML 'action' attribute.
+  // We still use handleSubmit for client-side validation before submission.
+  function handleValidationSuccess(data: ContactFormValues) {
+    console.log("Client-side validation successful:", data);
+    // The form will submit via the action attribute after validation passes.
+    toast.info("Submitting message...");
   }
 
   const contactEmail = "hasan.rizki.dev@example.com";
+  
+  // IMPORTANT: Replace this placeholder with your actual Formspree endpoint URL.
+  // Example: "https://formspree.io/f/yourformhash"
+  const formspreeEndpoint = "https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT"; 
 
   return (
     <section id="contact" className="container py-16 md:py-24 space-y-12">
@@ -74,7 +80,12 @@ const ContactSection = () => {
 
       <div className="max-w-lg mx-auto opacity-0 animate-fade-in-up [animation-delay:200ms]">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <form 
+            onSubmit={form.handleSubmit(handleValidationSuccess)} 
+            action={formspreeEndpoint} 
+            method="POST" 
+            className="space-y-6"
+          >
             <FormField
               control={form.control}
               name="name"
@@ -82,7 +93,8 @@ const ContactSection = () => {
                 <FormItem>
                   <FormLabel>Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your Name" {...field} />
+                    {/* Formspree requires 'name' attribute for fields */}
+                    <Input placeholder="Your Name" {...field} name="name" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -95,7 +107,8 @@ const ContactSection = () => {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="your.email@example.com" type="email" {...field} />
+                    {/* Formspree requires 'name' attribute for fields */}
+                    <Input placeholder="your.email@example.com" type="email" {...field} name="_replyto" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -108,10 +121,12 @@ const ContactSection = () => {
                 <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
+                    {/* Formspree requires 'name' attribute for fields */}
                     <Textarea
                       placeholder="Let's discuss a project or opportunity..."
                       rows={5}
                       {...field}
+                      name="message"
                     />
                   </FormControl>
                   <FormMessage />
