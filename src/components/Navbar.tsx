@@ -7,8 +7,15 @@ import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center justify-between">
+    <div className="sticky top-0 z-50 w-full p-2 lg:p-0 bg-background lg:bg-transparent">
+      <nav className={cn(
+        "w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60",
+        "lg:border-b-0 lg:bg-background/95 lg:backdrop-blur-none", // Desktop: standard sticky bar
+        "container flex h-14 items-center justify-between",
+        // Mobile specific styling (below lg)
+        "lg:h-14 lg:rounded-none",
+        "rounded-xl shadow-xl border border-border/50 bg-card/90 backdrop-blur-md" // Floating card look on mobile
+      )}>
         <div className="flex items-center">
           {/* Mobile Menu Trigger */}
           <div className="lg:hidden mr-2">
@@ -35,8 +42,8 @@ const Navbar = () => {
           
           <ThemeToggle />
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 };
 
