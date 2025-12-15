@@ -33,7 +33,7 @@ const SkillsSection = () => {
     {
       title: "Programming & Web Development",
       icon: Code,
-      skills: ["PHP", "Laravel Framework", "HTML", "CSS", "JavaScript", "RESTful APIs"],
+      skills: ["PHP", "Laravel Framework", "Go (Golang)", "HTML", "CSS", "JavaScript", "RESTful APIs"],
     },
     {
       title: "Data & Analysis",
