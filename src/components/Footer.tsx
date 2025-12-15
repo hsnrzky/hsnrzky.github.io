@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
         <div className="space-y-1">
           <p>&copy; {new Date().getFullYear()} Hasan Rizki. All rights reserved.</p>
-          <p className="text-xs">Built with PHP Laravel, Python, and a focus on operational efficiency.</p>
+          <p className="text-xs">Built with React, Tailwind CSS, and the help of a coding AI.</p>
         </div>
       </div>
     </footer>
