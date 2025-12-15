@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container flex flex-col items-center space-y-4">
         <div className="flex space-x-6">
           <a 
-            href="https://github.com/HasanRizki" // Placeholder link
+            href="https://github.com/HasanRizki"
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-muted-foreground hover:text-primary transition-colors"
@@ -17,15 +17,7 @@ const Footer = () => {
           >
             <Github className="h-6 w-6" />
           </a>
-          <a 
-            href="https://linkedin.com/in/HasanRizki" // Placeholder link
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-muted-foreground hover:text-primary transition-colors"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="h-6 w-6" />
-          </a>
+          {/* LinkedIn link temporarily disabled */}
           <a 
             href="https://instagram.com/hsnrzky"
             target="_blank" 

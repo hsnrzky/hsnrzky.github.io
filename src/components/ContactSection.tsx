@@ -6,7 +6,6 @@ import { Mail, Github, Linkedin, Instagram } from "lucide-react";
 const ContactSection = () => {
   const contactEmail = "hasanrizzky20@gmail.com";
   const githubLink = "https://github.com/HasanRizki";
-  const linkedinLink = "https://linkedin.com/in/HasanRizki";
   const instagramLink = "https://instagram.com/hsnrzky";
 
   return (
@@ -39,15 +38,7 @@ const ContactSection = () => {
           >
             <Github className="h-8 w-8" />
           </a>
-          <a 
-            href={linkedinLink} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-muted-foreground hover:text-primary transition-colors"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="h-8 w-8" />
-          </a>
+          {/* LinkedIn link temporarily disabled */}
           <a 
             href={instagramLink}
             target="_blank" 
