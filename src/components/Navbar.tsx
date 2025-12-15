@@ -37,9 +37,6 @@ const Navbar = () => {
         // Mobile (always uses floating card look, overriding any lg: styles below the lg breakpoint)
         mobileFloatingClasses,
         
-        // Desktop overrides (lg:)
-        "lg:h-14 lg:p-0 lg:m-0", // Ensure desktop uses full width/height settings
-        
         // Apply transparent or opaque desktop styles based on scroll state
         isScrolled ? desktopOpaqueClasses : desktopTransparentClasses
       )}>
