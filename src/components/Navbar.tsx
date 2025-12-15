@@ -21,10 +21,12 @@ const Navbar = () => {
   }, []);
 
   // Base classes for mobile floating card appearance
-  const mobileFloatingClasses = "rounded-xl shadow-xl border border-border/50 bg-card/90 backdrop-blur-md";
+  // Reduced opacity to bg-card/80 and increased blur to backdrop-blur-lg
+  const mobileFloatingClasses = "rounded-xl shadow-xl border border-border/50 bg-card/80 backdrop-blur-lg";
   
   // Desktop styles when SCROLLED (opaque bar, full width)
-  const desktopScrolledClasses = "lg:border-b lg:border-border/40 lg:bg-background/95 lg:backdrop-blur supports-[backdrop-filter]:lg:bg-background/60 lg:shadow-none lg:rounded-none";
+  // Reduced opacity to lg:bg-background/80 and increased blur to backdrop-blur-lg
+  const desktopScrolledClasses = "lg:border-b lg:border-border/40 lg:bg-background/80 lg:backdrop-blur-lg supports-[backdrop-filter]:lg:bg-background/60 lg:shadow-none lg:rounded-none";
   
   // Desktop styles when AT TOP (transparent, full width, merged with hero)
   const desktopTransparentClasses = "lg:bg-transparent lg:border-transparent lg:shadow-none lg:backdrop-blur-none lg:rounded-none";
