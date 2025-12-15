@@ -5,7 +5,7 @@ import { Mail, Github, Linkedin, Instagram } from "lucide-react";
 
 const ContactSection = () => {
   const contactEmail = "hasanrizzky20@gmail.com";
-  const githubLink = "https://github.com/HasanRizki";
+  const githubLink = "https://github.com/hsnrzky"; // Updated GitHub link
   const instagramLink = "https://instagram.com/hsnrzky";
 
   return (

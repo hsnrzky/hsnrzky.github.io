@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container flex flex-col items-center space-y-4">
         <div className="flex space-x-6">
           <a 
-            href="https://github.com/HasanRizki"
+            href="https://github.com/hsnrzky" // Updated GitHub link
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-muted-foreground hover:text-primary transition-colors"
