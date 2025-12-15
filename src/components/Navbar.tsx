@@ -1,20 +1,47 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./ThemeToggle";
 import MobileNav from "./MobileNav";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if scrolled down more than 10px
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check initial position
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Classes for the floating card look (primarily mobile)
+  const mobileFloatingClasses = "rounded-xl shadow-xl border border-border/50 bg-card/90 backdrop-blur-md";
+  
+  // Classes for the full-width opaque bar look (desktop when scrolled)
+  const desktopOpaqueClasses = "lg:border-b lg:border-border/40 lg:bg-background/95 lg:backdrop-blur supports-[backdrop-filter]:lg:bg-background/60 lg:shadow-none lg:rounded-none";
+  
+  // Classes for the transparent look (desktop when at top)
+  const desktopTransparentClasses = "lg:bg-transparent lg:border-transparent lg:shadow-none lg:backdrop-blur-none";
+
   return (
-    <div className="sticky top-0 z-50 w-full p-2 lg:p-0 bg-background lg:bg-transparent">
+    <div className="sticky top-0 z-50 w-full p-2 lg:p-0 transition-all duration-300">
       <nav className={cn(
-        "w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60",
-        "lg:border-b-0 lg:bg-background/95 lg:backdrop-blur-none", // Desktop: standard sticky bar
-        "container flex h-14 items-center justify-between",
-        // Mobile specific styling (below lg)
-        "lg:h-14 lg:rounded-none",
-        "rounded-xl shadow-xl border border-border/50 bg-card/90 backdrop-blur-md" // Floating card look on mobile
+        "w-full container flex h-14 items-center justify-between transition-all duration-300",
+        
+        // Mobile (always uses floating card look, overriding any lg: styles below the lg breakpoint)
+        mobileFloatingClasses,
+        
+        // Desktop overrides (lg:)
+        "lg:h-14 lg:p-0 lg:m-0", // Ensure desktop uses full width/height settings
+        
+        // Apply transparent or opaque desktop styles based on scroll state
+        isScrolled ? desktopOpaqueClasses : desktopTransparentClasses
       )}>
         <div className="flex items-center">
           {/* Mobile Menu Trigger */}
