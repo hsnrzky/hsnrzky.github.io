@@ -23,7 +23,11 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, description, technologies,
       <CardContent className="space-y-4">
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech, index) => (
-            <Badge key={index} variant="secondary" className="bg-secondary/50 text-secondary-foreground hover:bg-secondary/70 transition-colors duration-200">
+            <Badge 
+              key={index} 
+              variant="secondary" 
+              className="bg-secondary/50 text-secondary-foreground transition-colors duration-200 hover:bg-primary hover:text-primary-foreground cursor-default"
+            >
               {tech}
             </Badge>
           ))}
