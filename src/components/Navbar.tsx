@@ -20,51 +20,57 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Classes for the floating card look (primarily mobile)
+  // Base classes for mobile floating card appearance
   const mobileFloatingClasses = "rounded-xl shadow-xl border border-border/50 bg-card/90 backdrop-blur-md";
   
-  // Classes for the full-width opaque bar look (desktop when scrolled)
-  const desktopOpaqueClasses = "lg:border-b lg:border-border/40 lg:bg-background/95 lg:backdrop-blur supports-[backdrop-filter]:lg:bg-background/60 lg:shadow-none lg:rounded-none";
+  // Desktop styles when SCROLLED (opaque bar, full width)
+  const desktopScrolledClasses = "lg:border-b lg:border-border/40 lg:bg-background/95 lg:backdrop-blur supports-[backdrop-filter]:lg:bg-background/60 lg:shadow-none lg:rounded-none";
   
-  // Classes for the transparent look (desktop when at top)
-  const desktopTransparentClasses = "lg:bg-transparent lg:border-transparent lg:shadow-none lg:backdrop-blur-none";
+  // Desktop styles when AT TOP (transparent, full width, merged with hero)
+  const desktopTransparentClasses = "lg:bg-transparent lg:border-transparent lg:shadow-none lg:backdrop-blur-none lg:rounded-none";
 
   return (
     <div className="sticky top-0 z-50 w-full p-2 lg:p-0 transition-all duration-300">
       <nav className={cn(
-        "w-full container flex h-14 items-center justify-between transition-all duration-300",
+        "w-full flex h-14 items-center justify-center transition-all duration-300",
         
-        // Mobile (always uses floating card look, overriding any lg: styles below the lg breakpoint)
+        // Mobile appearance (default)
         mobileFloatingClasses,
         
-        // Apply transparent or opaque desktop styles based on scroll state
-        isScrolled ? desktopOpaqueClasses : desktopTransparentClasses
-      )}>
-        <div className="flex items-center">
-          {/* Mobile Menu Trigger */}
-          <div className="lg:hidden mr-2">
-            <MobileNav />
-          </div>
-          
-          {/* Logo/Name link always scrolls to top */}
-          <a href="#" className="flex items-center space-x-2" onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}>
-            <span className="font-bold text-lg text-primary hover:text-primary/80 transition-colors duration-200">Hasan Rizki Sulaiman</span>
-          </a>
-        </div>
+        // Desktop overrides: Remove mobile appearance properties on desktop
+        "lg:rounded-none lg:shadow-none lg:border-none lg:bg-transparent lg:backdrop-blur-none",
         
-        <div className="flex items-center space-x-4">
-          {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <NavLink href="#">Home</NavLink>
-            <NavLink href="#projects">Projects</NavLink>
-            <NavLink href="#skills">Skills</NavLink>
-            <NavLink href="#contact">Contact</NavLink>
+        // Apply desktop scroll state appearance
+        isScrolled ? desktopScrolledClasses : desktopTransparentClasses
+      )}>
+        {/* Inner container to constrain content width */}
+        <div className="container flex h-full items-center justify-between">
+          <div className="flex items-center">
+            {/* Mobile Menu Trigger */}
+            <div className="lg:hidden mr-2">
+              <MobileNav />
+            </div>
+            
+            {/* Logo/Name link always scrolls to top */}
+            <a href="#" className="flex items-center space-x-2" onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}>
+              <span className="font-bold text-lg text-primary hover:text-primary/80 transition-colors duration-200">Hasan Rizki Sulaiman</span>
+            </a>
           </div>
           
-          <ThemeToggle />
+          <div className="flex items-center space-x-4">
+            {/* Desktop Navigation Links */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <NavLink href="#">Home</NavLink>
+              <NavLink href="#projects">Projects</NavLink>
+              <NavLink href="#skills">Skills</NavLink>
+              <NavLink href="#contact">Contact</NavLink>
+            </div>
+            
+            <ThemeToggle />
+          </div>
         </div>
       </nav>
     </div>
