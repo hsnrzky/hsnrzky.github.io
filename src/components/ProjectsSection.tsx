@@ -52,6 +52,12 @@ const ProjectCard: React.FC<ProjectProps> = ({ title, description, technologies,
 const ProjectsSection = () => {
   const projects: ProjectProps[] = [
     {
+      title: "Gudangku - Inventory Management System",
+      description: "A comprehensive inventory management system built to track stock, manage suppliers, and handle incoming/outgoing goods efficiently.",
+      technologies: ["PHP", "Laravel", "MySQL", "Bootstrap", "AdminLTE"],
+      githubLink: "https://github.com/hsnrzky/Gudangku",
+    },
+    {
       title: "Laravel E-commerce Prototype",
       description: "Developed a basic e-commerce platform prototype using PHP Laravel, focusing on user authentication, product catalog management, and shopping cart functionality.",
       technologies: ["PHP", "Laravel", "MySQL", "Blade Templates", "Bootstrap"],
@@ -67,12 +73,6 @@ const ProjectsSection = () => {
       title: "RESTful API Service (Laravel)",
       description: "Built a simple RESTful API using Laravel for managing resources (CRUD operations), demonstrating understanding of API design principles and routing.",
       technologies: ["PHP", "Laravel", "API Development", "JSON", "Postman"],
-      githubLink: "#", // Placeholder
-    },
-    {
-      title: "Administrative Dashboard Interface",
-      description: "Designed and implemented a simple web dashboard for administrative tasks, focusing on efficient data display and user interaction for internal operations.",
-      technologies: ["HTML", "CSS", "JavaScript", "Bootstrap/Tailwind"],
       githubLink: "#", // Placeholder
     },
   ];
