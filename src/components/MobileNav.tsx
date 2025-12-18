@@ -15,9 +15,17 @@ interface NavLinkProps {
 const NavLink: React.FC<NavLinkProps> = ({ href, children, onLinkClick }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     onLinkClick(); // Close sheet on click
-    if (href === "#") {
+    if (href.startsWith("#")) {
       e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      } else if (href === "#") {
+        // Handle scroll to top for '#'
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }
     // For other hash links, rely on global scroll-smooth CSS
   };

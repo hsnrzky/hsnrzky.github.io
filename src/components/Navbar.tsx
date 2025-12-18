@@ -26,10 +26,10 @@ const Navbar = () => {
   
   // Desktop styles when SCROLLED (opaque bar, full width)
   // Reduced opacity to lg:bg-background/80 and increased blur to backdrop-blur-lg
-  const desktopScrolledClasses = "lg:border-b lg:border-border/40 lg:bg-background/80 lg:backdrop-blur-lg supports-[backdrop-filter]:lg:bg-background/60 lg:shadow-none lg:rounded-xl";
+  const desktopScrolledClasses = "lg:border-b lg:border-border/40 lg:bg-background/80 lg:backdrop-blur-lg supports-[backdrop-filter]:lg:bg-background/60 lg:shadow-md lg:rounded-none";
   
   // Desktop styles when AT TOP (transparent, full width, merged with hero)
-  const desktopTransparentClasses = "lg:bg-transparent lg:border-transparent lg:shadow-none lg:backdrop-blur-lg lg:rounded-none";
+  const desktopTransparentClasses = "lg:bg-background/50 lg:border lg:border-border/50 lg:shadow-none lg:backdrop-blur-lg lg:rounded-none";
 
   return (
     <div className="sticky top-0 z-50 w-full p-2 lg:p-0 transition-all duration-300">
@@ -81,9 +81,17 @@ const Navbar = () => {
 
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (href === "#") {
+    if (href.startsWith("#")) {
       e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      } else if (href === "#") {
+        // Handle scroll to top for '#'
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }
     // For other hash links (e.g., #projects), we rely on the global scroll-smooth CSS property.
   };
