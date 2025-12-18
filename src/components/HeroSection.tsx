@@ -28,7 +28,7 @@ const HeroSection = () => {
             </a>
           </Button>
           <Button variant="outline" size="lg" className="group relative overflow-hidden border-primary text-primary hover:bg-primary/10 hover:text-primary shadow-md shadow-primary/10">
-            <a href="/cv/hasan_rizki_cv.pdf" download className="flex items-center">
+            <a href="/cv/HasanRizkiSulaiman_CV(English).pdf" download className="flex items-center">
               <span className="relative z-10">Download CV</span>
               <Download className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-y-1" />
             </a>

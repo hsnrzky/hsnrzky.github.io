@@ -58,10 +58,10 @@ const ProjectsSection = () => {
       githubLink: "https://github.com/hsnrzky/Gudangku",
     },
     {
-      title: "Laravel E-commerce Prototype",
-      description: "Developed a basic e-commerce platform prototype using PHP Laravel, focusing on user authentication, product catalog management, and shopping cart functionality.",
-      technologies: ["PHP", "Laravel", "MySQL", "Blade Templates", "Bootstrap"],
-      githubLink: "#", // Placeholder
+      title: "Book Management API (Golang)",
+      description: "A simple and clean RESTful Book Management API built with Golang (Go) using the Gin Web Framework and SQLite database.",
+      technologies: ["Go(Golang)", "Gin", "SQLite"],
+      githubLink: "https://github.com/hsnrzky/Book-API", // Placeholder
     },
     {
       title: "Python Data Processing Script",
