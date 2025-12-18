@@ -22,14 +22,14 @@ const Navbar = () => {
 
   // Base classes for mobile floating card appearance
   // Reduced opacity to bg-card/80 and increased blur to backdrop-blur-lg
-  const mobileFloatingClasses = "rounded-xl shadow-xl border border-border/50 bg-card/80 backdrop-blur-lg";
+  const mobileFloatingClasses = "rounded-xl shadow-xl border border-border/50 bg-card/80 backdrop-blur-sm";
   
   // Desktop styles when SCROLLED (opaque bar, full width)
   // Reduced opacity to lg:bg-background/80 and increased blur to backdrop-blur-lg
-  const desktopScrolledClasses = "lg:border-b lg:border-border/40 lg:bg-background/80 lg:backdrop-blur-lg supports-[backdrop-filter]:lg:bg-background/60 lg:shadow-none lg:rounded-none";
+  const desktopScrolledClasses = "lg:border-b lg:border-border/40 lg:bg-background/80 lg:backdrop-blur-lg supports-[backdrop-filter]:lg:bg-background/60 lg:shadow-none lg:rounded-xl";
   
   // Desktop styles when AT TOP (transparent, full width, merged with hero)
-  const desktopTransparentClasses = "lg:bg-transparent lg:border-transparent lg:shadow-none lg:backdrop-blur-none lg:rounded-none";
+  const desktopTransparentClasses = "lg:bg-transparent lg:border-transparent lg:shadow-none lg:backdrop-blur-lg lg:rounded-none";
 
   return (
     <div className="sticky top-0 z-50 w-full p-2 lg:p-0 transition-all duration-300">
@@ -40,7 +40,7 @@ const Navbar = () => {
         mobileFloatingClasses,
         
         // Desktop overrides: Remove mobile appearance properties on desktop
-        "lg:rounded-none lg:shadow-none lg:border-none lg:bg-transparent lg:backdrop-blur-none",
+        "lg:rounded-none lg:shadow-none lg:border-none lg:bg-transparent lg:backdrop-blur-lg",
         
         // Apply desktop scroll state appearance
         isScrolled ? desktopScrolledClasses : desktopTransparentClasses
