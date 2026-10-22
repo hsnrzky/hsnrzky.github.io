@@ -4,7 +4,8 @@
   "description": "Portfolio Backend & Systems — Hasan Rizki Sulaiman",
   "scripts": {
     "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "deploy": "npm run build && git add . && git commit -m \"Update portfolio\" && git push origin main && git push origin main:gh-pages"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.3.3",
