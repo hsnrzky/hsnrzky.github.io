@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+/* Pastikan Tailwind v4 memindai file HTML dan JS kamu */
+@source "../index.html";
+@source "script.js";
+
+/* ============================================================
+   1. DEFINISI VARIABEL TEMA (LIGHT & DARK)
+   Di Tailwind v4, gunakan nilai warna penuh (Hex / RGB utuh)
+   ============================================================ */
+:root,
+html[data-theme="light"] {
+  --bg:         #F6F5F0;
+  --surface:    #FFFFFF;
+  --elevated:   #EEECE5;
+  --fg:         #111315;
+  --muted:      #525860;
+  --subtle:     #8C9198;
+  --line:       #DAD7CD;
+  --accent:     #EA580C; /* Signal Orange (Light Mode) */
+  --on-accent:  #FFFFFF;
+  --emerald:    #059669;
+  --cyan:       #0E7490;
+  --amber:      #D97706;
+  --rose:       #E11D48;
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --bg:         #0B0C0E;
+  --surface:    #121418;
+  --elevated:   #191C22;
+  --fg:         #F1F3F5;
+  --muted:      #949CA8;
+  --subtle:     #5A626E;
+  --line:       #22262E;
+  --accent:     #F97316; /* Bright Amber Orange (Dark Mode) */
+  --on-accent:  #0B0C0E;
+  --emerald:    #34D399;
+  --cyan:       #38BDF8;
+  --amber:      #FBBF24;
+  --rose:       #FB7185;
+  color-scheme: dark;
+}
+
+/* ============================================================
+   2. REGISTRASI TOKEN KE TAILWIND V4 (@theme inline)
+   Ini otomatis membuat class bg-accent, text-accent, border-accent/40, dll.
+   ============================================================ */
+@theme inline {
+  --font-sans:    "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-bg:       var(--bg);
+  --color-surface:  var(--surface);
+  --color-elevated: var(--elevated);
+  --color-fg:       var(--fg);
+  --color-muted:    var(--muted);
+  --color-subtle:   var(--subtle);
+  --color-line:     var(--line);
+  --color-accent:   var(--accent);
+  --color-onaccent: var(--on-accent);
+  --color-emerald:  var(--emerald);
+  --color-cyan:     var(--cyan);
+  --color-amber:    var(--amber);
+  --color-rose:     var(--rose);
+}
+
+/* ============================================================
+   3. BASE STYLES & CUSTOM UTILITIES
+   ============================================================ */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--on-accent);
+}
+
+/* Architectural Background Grid */
+.bg-blueprint {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, color-mix(in srgb, var(--line) 40%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--line) 40%, transparent) 1px, transparent 1px);
+}
+
+.radial-mask {
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, #000 40%, transparent 100%);
+          mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, #000 40%, transparent 100%);
+}
+
+/* Dot Matrix Pattern */
+.dot-matrix {
+  background-image: radial-gradient(color-mix(in srgb, var(--fg) 12%, transparent) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Theme Icon Visibility */
+[data-theme="light"] .only-dark { display: none; }
+[data-theme="dark"] .only-light { display: none; }
+
+/* Custom Scrollbar */
+.code-scroll::-webkit-scrollbar { height: 6px; width: 6px; }
+.code-scroll::-webkit-scrollbar-track { background: transparent; }
+.code-scroll::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
+
+/* Marquee Animation */
+.marquee-track { animation: scroll-x 32s linear infinite; }
+.marquee-track:hover { animation-play-state: paused; }
+@keyframes scroll-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Bento Card Hover */
+.bento-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.bento-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 70%, transparent);
+  box-shadow: 0 16px 40px -15px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+/* Modal State Transitions */
+#projectModal.modal-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+#projectModal.modal-open #modalPanel {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
