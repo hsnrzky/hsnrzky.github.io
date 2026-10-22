@@ -1,68 +1,24 @@
-# Hasan Rizki Sulaiman — Portfolio
+# Hasan Rizki Sulaiman
 
-Portfolio pribadi Hasan Rizki Sulaiman, mahasiswa Sistem Informasi yang berfokus pada backend development dan pengolahan data.
+Mahasiswa **Sistem Informasi** yang tertarik membangun aplikasi web dan sistem backend yang bersih, terstruktur, dan bermanfaat. Saya berfokus pada pengembangan aplikasi dengan **PHP dan Laravel**, pembuatan **RESTful API menggunakan Go**, serta pemrosesan dan analisis data dengan **Python**.
 
-🌐 **Website:** [https://hsnrzky.github.io](https://hsnrzky.github.io)
+## Keahlian
 
-## Tentang
+- **Backend & web:** PHP, Laravel, Go, Gin, HTML, CSS, dan JavaScript
+- **Database:** MySQL, SQLite, dan perancangan basis data relasional
+- **Data:** Python, Pandas, pembersihan data, dan SQL
+- **Lainnya:** troubleshooting, pencatatan inventaris, dokumentasi, dan administrasi data
 
-Website satu halaman ini menampilkan profil, proyek, keahlian, dan informasi kontak. Fitur yang tersedia:
+## Proyek pilihan
 
-- Tema terang dan gelap, dengan preferensi tema yang disimpan di browser.
-- Console interaktif untuk melihat ringkasan profil, stack, dan status.
-- Detail arsitektur proyek, endpoint, skema database, dan contoh payload.
-- Navigasi responsif untuk perangkat desktop dan mobile.
+- **Gudangku — Inventory System:** aplikasi inventaris untuk mengelola stok, pemasok, serta transaksi barang masuk dan keluar.
+- **Book Management API:** REST API untuk pengelolaan katalog buku menggunakan Go, Gin, dan SQLite.
+- **Python Data Processing:** alur kerja untuk membersihkan, mentransformasi, dan menganalisis data.
+- **Laravel Modular REST API:** proyek API berbasis Laravel dengan struktur modular.
 
-## Teknologi
+## Mari terhubung
 
-- HTML
-- Tailwind CSS 4
-- JavaScript
-- GitHub Pages
+Saya terbuka untuk kesempatan magang, kolaborasi proyek, diskusi teknis, dan peluang di bidang backend, pengembangan web, serta data.
 
-## Menjalankan secara lokal
-
-Pastikan Node.js dan npm sudah terpasang, lalu jalankan:
-
-```bash
-npm install
-npm run dev
-```
-
-Perintah `npm run dev` membuat Tailwind memantau perubahan pada `src/input.css` dan menghasilkan `dist/output.css`. Buka `index.html` melalui server lokal untuk melihat website.
-
-Untuk membuat CSS produksi:
-
-```bash
-npm run build
-```
-
-## Deploy ke GitHub Pages
-
-Repository ini menggunakan branch `master` sebagai sumber dan menerbitkan situs dari branch `gh-pages` pada folder root. Di GitHub, buka **Settings → Pages**, lalu pilih **Deploy from a branch**, branch **`gh-pages`**, dan folder **`/(root)`**.
-
-Untuk build dan menerbitkan perubahan dari branch `master`:
-
-```bash
-npm run deploy
-```
-
-Script tersebut membuat build, melakukan commit perubahan, lalu push ke `master` dan menerbitkan isi `master` ke `gh-pages`. Setelah deploy selesai, aktifkan **Enforce HTTPS** di pengaturan Pages agar koneksi pengunjung ke situs menggunakan HTTPS. HTTPS mengenkripsi koneksi, bukan file di repository.
-
-## Struktur proyek
-
-```text
-.
-├── dist/
-│   └── output.css
-├── src/
-│   ├── input.css
-│   └── script.js
-├── index.html
-├── package.json
-└── tailwind.config.js
-```
-
-## Kontak
-
-[hasanrizzky20@gmail.com](mailto:hasanrizzky20@gmail.com)
+- **Email:** [hasanrizzky20@gmail.com](mailto:hasanrizzky20@gmail.com)
+- **Portfolio:** [hsnrzky.github.io](https://hsnrzky.github.io)
