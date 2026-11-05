@@ -52,7 +52,7 @@ const endpoints = {
     payload: {
       status: 201,
       available_for: ["Internship", "Junior Backend Role", "Project Collaboration"],
-      contact: "hasanrizzky20@gmail.com",
+      contact: "hasanrizky20@gmail.com",
       response_time: "Fast & Collaborative"
     }
   }
