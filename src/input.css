@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* Pastikan Tailwind v4 memindai file HTML dan JS kamu */
-@source "../index.html";
+@source "index.html";
 @source "script.js";
 
 /* ============================================================

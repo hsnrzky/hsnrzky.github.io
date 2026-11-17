@@ -1,3 +1,5 @@
+import './input.css';
+
 const root = document.documentElement;
 const themeColorMeta = document.getElementById('themeColor');
 const THEME_COLORS = { light: '#F6F5F0', dark: '#0B0C0E' };

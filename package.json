@@ -2,13 +2,20 @@
   "name": "hasan-rizki-portfolio",
   "version": "1.0.0",
   "description": "Portfolio Backend & Systems — Hasan Rizki Sulaiman",
+  "type": "module",
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
-    "deploy": "npm run build && git add . && git commit -m \"Update portfolio\" && git push origin master && git push origin master:gh-pages"
+    "dev": "vite",
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.3.3",
-    "tailwindcss": "^4.3.3"
+    "@tailwindcss/cli": "^4.3.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "gh-pages": "^6.3.0",
+    "tailwindcss": "^4.3.5",
+    "vite": "^8.3.8"
   }
 }
